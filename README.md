@@ -37,6 +37,42 @@ Once the application is up and running, you can perform the following CRUD opera
 - MongoDB
 - Maven
 
+  ## Usage
+
+Once the application is up and running, you can perform the following CRUD operations:
+
+- **Create**: Add new tasks to the MongoDB database.
+  - Endpoint: `POST /api/tasks`
+  - Request Body: JSON object representing the new task.
+    ```json
+    {
+        "description": "Task description",
+        "severity": 3,
+        "assignee": "John Doe",
+        "storyPoint": 5
+    }
+    ```
+- **Read**: Retrieve tasks from the MongoDB database.
+  - Endpoint: `GET /api/tasks`
+  - Retrieve all tasks.
+  - Endpoint: `GET /api/tasks/{taskId}`
+  - Retrieve a specific task by its ID.
+- **Update**: Modify existing tasks in the MongoDB database.
+  - Endpoint: `PUT /api/tasks/{taskId}`
+  - Update a specific task by its ID.
+  - Request Body: JSON object representing the updated task.
+    ```json
+    {
+        "description": "Updated task description",
+        "severity": 2,
+        "assignee": "Jane Smith",
+        "storyPoint": 8
+    }
+    ```
+- **Delete**: Remove tasks from the MongoDB database.
+  - Endpoint: `DELETE /api/tasks/{taskId}`
+  - Delete a specific task by its ID.
+
 ## Contributing
 
 Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or submit a pull request.
